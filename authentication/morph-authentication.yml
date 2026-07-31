@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/morph-l2/morph-skill (Data Sources table) + https://docs.morph.network/
+summary:
+  types: [none, jwt, wallet-signature]
+  notes: >-
+    Morph is an EVM Layer-2. Public JSON-RPC (rpc.morph.network) and the
+    Blockscout explorer API (explorer-api.morph.network/api/v2) require NO
+    authentication for reads. State-changing operations are authenticated by
+    Ethereum wallet signatures (private-key / EIP-712 / EIP-191 / EIP-3009), not
+    an API credential. The BulbaSwap DEX aggregator bridge order-management
+    surface requires a JWT (obtained via bridge-login).
+schemes:
+- name: json-rpc-public
+  type: none
+  endpoint: https://rpc.morph.network/
+  description: Ethereum-compatible JSON-RPC, no API key required.
+- name: explorer-blockscout
+  type: none
+  endpoint: https://explorer-api.morph.network/api/v2
+  description: Blockscout REST API, public reads, no API key required.
+- name: wallet-signature
+  type: signature
+  schemes: [secp256k1-tx, EIP-712, EIP-191, EIP-3009]
+  description: >-
+    Write operations (transfers, swaps, agent identity, x402 payments) are
+    authorized by client-side wallet signatures over the private key; no
+    server-issued token.
+- name: bridge-jwt
+  type: http
+  scheme: bearer
+  endpoint: https://api.bulbaswap.io
+  description: Cross-chain bridge order management requires a JWT via bridge-login.

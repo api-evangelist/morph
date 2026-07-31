@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morph.network/ + https://github.com/morph-l2/go-ethereum/releases
+versioning:
+  scheme: >-
+    Node client (go-ethereum fork) released via semver GitHub releases; JSON-RPC
+    follows Ethereum method versioning; docs sections are path-versioned.
+  node_releases: https://github.com/morph-l2/go-ethereum/releases
+  agent_skill: semver (morph-l2/morph-skill, current 1.6.0)
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal API deprecation policy or RFC 8594 Sunset header documented.
+status_page: null
+sla:
+  url: null
+  notes: >-
+    Morph publishes no first-party status page or SLA at status.morph.network
+    (probed 2026-07-20, no DNS). Managed RPC providers (QuickNode, dRPC) carry
+    their own SLAs.
+deprecated_operations: []

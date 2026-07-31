@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.morph.network/docs/build-on-morph/build-on-morph/development-setup
+  + https://github.com/morph-l2/morph-doc + faucet providers
+summary: >-
+  Morph separates a live Mainnet (chain id 2818) from the Morph Hoodi Testnet
+  (chain id 2910), each an EVM-equivalent Optimistic zkEVM L2 addressed by chain
+  id rather than test/live API-key prefixes. Developers build and test against
+  Hoodi with freely-faucetable test ETH, then bridge to and deploy on Mainnet.
+  No secret API key is issued for either network; the "sandbox" is the testnet.
+networks:
+- name: Morph Mainnet
+  mode: live
+  chain_id: 2818
+  rpc: https://rpc-quicknode.morph.network
+  websocket: wss://rpc-quicknode.morph.network
+  currency: ETH
+  explorer: https://explorer.morph.network
+- name: Morph Hoodi Testnet
+  mode: test
+  chain_id: 2910
+  rpc: https://rpc-hoodi.morph.network
+  websocket: wss://rpc-hoodi.morph.network
+  currency: ETH
+  explorer: https://explorer-hoodi.morph.network
+  bridge: https://bridge-hoodi.morph.network
+test_funds:
+  description: >-
+    No native Morph faucet; acquire Ethereum Hoodi test ETH from a public faucet,
+    then bridge it to Morph Hoodi via bridge-hoodi.morph.network. Test ETH has no
+    real value.
+  faucets:
+  - https://stakely.io/faucet/ethereum-hoodi-testnet-eth
+  - https://faucet.quicknode.com/ethereum/hoodi
+  - https://hoodi-faucet.pk910.de
+  - https://cloud.google.com/application/web3/faucet/ethereum
+  - https://faucets.chain.link/ethereum-testnet-hoodi-morph
+test_contracts:
+  notes: >-
+    EIP-8004 agent registries deployed on Hoodi testnet (from morph-l2/morph-skill
+    testnet override).
+  identity_registry: '0x8004A818BFB912233c491871b3d84c89A494BD9e'
+  reputation_registry: '0x8004B663056A597Dffe9eCcC1965A193B7388713'
+notes: >-
+  There is no test/live key prefix, test clock, or hosted fixture tooling — the
+  test/live boundary is the chain id and RPC host. The public JSON-RPC and
+  Blockscout explorer APIs require no API key on either network.

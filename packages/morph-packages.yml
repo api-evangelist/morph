@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/package/@morph-l2/sdk
+packages:
+- language: javascript
+  registry: npm
+  name: "@morph-l2/sdk"
+  version: 0.3.30
+  url: https://www.npmjs.com/package/@morph-l2/sdk
+  install: npm install @morph-l2/sdk
+  license: MIT
+  official: true
+  description: >-
+    Official Morph L2 SDK. Provides CrossChainMessenger for moving assets/data
+    between Ethereum and Morph, plus utilities for Morph's transaction fee model
+    (e.g. estimateTotalGasCost).
+- language: python
+  registry: github
+  name: morph-skill (scripts/morph_api.py)
+  url: https://github.com/morph-l2/morph-skill
+  install: "git clone https://github.com/morph-l2/morph-skill && pip install requests eth_account eth_abi eth_utils"
+  license: MIT
+  official: true
+  description: >-
+    Official Morph agent CLI toolkit for wallet, explorer, DEX, bridge, EIP-8004
+    identity, alt-fee, EIP-7702, and x402 flows. Also catalogued as an Agent
+    Skill (skills/) and a CLI (cli/).

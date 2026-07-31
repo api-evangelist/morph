@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/morph-l2/morph-skill
+cli:
+  name: morph_api.py
+  vendor: Morph
+  official: true
+  repo: https://github.com/morph-l2/morph-skill
+  entrypoint: python3 scripts/morph_api.py <command> [options]
+  install:
+  - "git clone https://github.com/morph-l2/morph-skill"
+  - "pip install requests eth_account eth_abi eth_utils"
+  output: JSON (all commands emit JSON; amounts in human-readable units)
+  auth: "No API key for queries; write commands require --private-key for local signing; bridge order management requires JWT via bridge-login"
+  chain: Morph Mainnet (chain id 2818)
+  data_sources:
+  - name: Morph RPC
+    url: https://rpc.morph.network/
+    auth: none
+  - name: Explorer API (Blockscout)
+    url: https://explorer-api.morph.network/api/v2
+    auth: none
+  - name: DEX Aggregator (BulbaSwap)
+    url: https://api.bulbaswap.io
+    auth: none for queries / JWT for orders
+  command_groups:
+  - group: wallet
+    commands: [create-wallet, balance, token-balance, transfer, transfer-token, tx-receipt]
+  - group: explorer
+    commands: [address-info, address-txs, address-tokens, tx-detail, token-search, contract-info, token-transfers, token-info, token-list]
+  - group: agent-identity
+    standard: EIP-8004
+    commands: [agent-register, agent-wallet, agent-metadata, agent-reputation, agent-feedback, agent-reviews, agent-set-metadata, agent-set-uri, agent-set-wallet, agent-unset-wallet, agent-revoke-feedback, agent-append-response]
+  - group: dex
+    commands: [dex-quote, dex-send, dex-approve, dex-allowance]
+  - group: bridge
+    commands: [bridge-chains, bridge-tokens, bridge-token-search, bridge-login]
+  - group: altfee
+    description: Pay gas with alternative ERC-20 tokens
+  - group: eip-7702
+    commands: [7702-delegate, 7702-authorize, 7702-send, 7702-batch, 7702-revoke]
+  - group: x402
+    commands: [x402-supported, x402-discover, x402-pay, x402-register, x402-verify, x402-settle, x402-server]

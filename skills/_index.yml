@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/morph-l2/morph-skill
+description: >-
+  Morph publishes an official Agent Skill (morph-l2/morph-skill) — a CLI toolkit
+  (scripts/morph_api.py) exposing wallet, explorer, DEX, bridge, EIP-8004 agent
+  identity/reputation, alt-fee gas, EIP-7702 delegation, and x402 payment
+  commands for AI agents on Morph Mainnet (chain id 2818). Saved verbatim.
+skills:
+- file: morph-skill.md
+  name: morph-skill
+  version: 1.6.0
+  api: rpc.morph.network / explorer-api.morph.network
+  source: https://raw.githubusercontent.com/morph-l2/morph-skill/main/SKILL.md
+  provider_published: true
+  sub_skills:
+  - morph-wallet
+  - morph-explorer
+  - morph-identity
+  - morph-dex
+  - morph-bridge
+  - morph-altfee
+  - morph-7702
+  - morph-x402
+  operations:
+  - create-wallet
+  - balance
+  - token-balance
+  - transfer
+  - transfer-token
+  - tx-receipt
+  - address-info
+  - address-txs
+  - tx-detail
+  - token-search
+  - contract-info
+  - token-info
+  - agent-register
+  - agent-reputation
+  - agent-feedback
+  - dex-quote
+  - dex-send
+  - bridge-chains
+  - bridge-tokens

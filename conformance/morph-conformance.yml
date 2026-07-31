@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morph.network/ + https://github.com/morph-l2/morph-skill + https://chainid.network/chain/2818/
+standards:
+- id: evm
+  conforms: true
+  evidence: Morph is an EVM-equivalent Optimistic zkEVM L2 (chain id 2818); Solidity contracts deploy unmodified.
+- id: ethereum-json-rpc
+  conforms: true
+  evidence: rpc.morph.network implements standard eth_*/net_*/web3_* JSON-RPC methods plus morph_* extensions.
+- id: erc-20
+  conforms: true
+  evidence: Native ERC-20 token support across wallet/explorer/DEX flows.
+- id: erc-721
+  conforms: true
+  evidence: EIP-8004 agent identity is a numeric ERC-721 token id.
+- id: eip-1559
+  conforms: true
+  evidence: EIP-1559 fee market inherited from go-ethereum fork; SDK estimateTotalGasCost.
+- id: eip-712
+  conforms: true
+  evidence: Typed-data signing used for agent-set-wallet (AgentWalletSet) authorization.
+- id: eip-3009
+  conforms: true
+  evidence: TransferWithAuthorization used for gasless USDC in x402 payment flow.
+- id: eip-7702
+  conforms: true
+  evidence: EOA delegation via tx type 0x04 supported (7702-delegate/authorize/send/batch/revoke).
+- id: eip-8004
+  conforms: true
+  evidence: On-chain agent IdentityRegistry + ReputationRegistry (0x8004...).
+- id: x402
+  conforms: true
+  evidence: x402 HTTP payment protocol (discover/pay/verify/settle) implemented in morph-skill.
+- id: json-rpc-2.0
+  conforms: true
+  evidence: RPC transport is JSON-RPC 2.0.

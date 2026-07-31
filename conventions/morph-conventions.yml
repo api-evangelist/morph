@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morph.network/docs/build-on-morph/developer-resources/morph-json-rpc-api-methods/ + https://github.com/morph-l2/morph-skill
+apis:
+  json_rpc:
+    protocol: JSON-RPC 2.0 over HTTPS
+    endpoint: https://rpc.morph.network/
+    websocket: available
+    chain_id: 2818
+    compatibility: >-
+      Ethereum-compatible JSON-RPC (eth_*, net_*, web3_*) plus Morph-specific
+      methods (e.g. morph_getBlockByNumber) that return additional L2 fields.
+    idempotency: >-
+      JSON-RPC reads are naturally idempotent; state changes are transactions
+      keyed by account nonce (replay protection), not an idempotency-key header.
+    error_envelope: JSON-RPC 2.0 error object {code, message, data}
+  explorer:
+    protocol: REST (Blockscout v2) + GraphQL
+    rest_endpoint: https://explorer-api.morph.network/api/v2
+    graphql: https://explorer.morph.network (Blockscout GraphQL)
+    docs: https://explorer.morph.network/api-docs
+    pagination:
+      style: cursor
+      description: >-
+        Blockscout v2 uses next_page_params cursor pagination; list endpoints
+        accept a --limit and return next_page_params for continuation.
+    auth: none (public reads)
+versioning:
+  scheme: uri-path (docs sections versioned; RPC follows Ethereum JSON-RPC)
+notes: >-
+  No provider-documented idempotency-key header (transaction nonce provides
+  replay protection). No documented client-facing rate-limit header on the
+  public RPC/explorer; hosted providers (QuickNode, dRPC) apply their own
+  plan-based limits.
+cross_links:
+  authentication: authentication/morph-authentication.yml
+  conformance: conformance/morph-conformance.yml
+  lifecycle: lifecycle/morph-lifecycle.yml
