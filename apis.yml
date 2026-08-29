@@ -11,6 +11,17 @@ description: >-
   (morph-l2/morph-skill) covering wallet operations, DEX swaps, cross-chain
   bridging, EIP-8004 agent identity and reputation, alternative-token gas payment,
   EIP-7702 delegation, and the x402 HTTP payment protocol.
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
