@@ -24,15 +24,18 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  - sandbox
+  - {url: 'https://www.morphl2.io/', status: 301, note: 'declared website redirects to https://morph.network/ — a different registrable domain (morphl2.io -> morph.network), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  generated: '2026-09-03'
   method: derived
 image: https://morph.network/share/share-morph.jpeg
 url: https://raw.githubusercontent.com/api-evangelist/morph/refs/heads/main/apis.yml
