@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Morph is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+Morph is an Optimistic zkEVM Ethereum Layer-2 blockchain (chain id 2818) focused on consumer-facing applications, backed by Pantera Capital. Its modular design combines a decentralized sequencer network with a Responsive Validity Proof system. Developers integrate with Morph through an Ethereum-compatible JSON-RPC API (rpc.morph.network) that adds Morph-specific methods, a Blockscout block explorer REST/GraphQL API (explorer-api.morph.network), the official @morph-l2/sdk JavaScript library, and an official AI Agent Skill and CLI (morph-l2/morph-skill) covering wallet operations, DEX swaps, cross-chain bridging, EIP-8004 agent identity and reputation, alternative-token gas payment, EIP-7702 delegation, and the x402 HTTP payment protocol.
 
-Backed by: pantera-capital — https://www.morphl2.io/
+**Areas:** Company · Cryptocurrency · Blockchain · Layer 2 · Ethereum · zkEVM · Web3 · Developer Tools
+
+## Morph on APIs.io
+
+Everything profiled for Morph is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/morph/](https://apis.io/providers/morph/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Morph JSON-RPC API](https://apis.io/apis/morph/morph-json-rpc-api/) — Ethereum-compatible JSON-RPC 2.0 API (eth_*, net_*, web3_*) plus Morph-specific methods such as morph_getBlockByNumber that return additional L2 fields. No…
+- [Morph Explorer API](https://apis.io/apis/morph/morph-explorer-api/) — Blockscout-based block explorer API for Morph — REST v2 and GraphQL over blocks, transactions, addresses, tokens, and verified contracts. No API key required.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Morph Authentication](https://apis.io/security/morph/morph-authentication/)
+- [Morph Domain Security](https://apis.io/security/morph/morph-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.morphl2.io/)
+- [Documentation](https://docs.morph.network/docs/build-on-morph/intro/)
+- [Getting started](https://docs.morph.network/docs/build-on-morph/build-on-morph/development-setup/)
+- [API reference](https://explorer.morph.network/api-docs)
+- [Blog](https://morph.network/blog)
+- [GitHub](https://github.com/morph-l2)
+
+## API Evangelist rating
+
+**Kin Score 28.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 81.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 6.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/morph/](https://apis.io/providers/morph/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Morph: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/morph/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
